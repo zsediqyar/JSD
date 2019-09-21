@@ -1,0 +1,38 @@
+.header {
+    background-image: linear-gradient(to right bottom,
+        rgba($light-blue, .7),
+        rgba($dark-blue, .8)),
+        url("/imgs/index-hero.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 95vh;
+    width: 100%;
+    grid-column: 1 / -1;
+
+    grid-template-rows: repeat(2, 1fr);
+
+    &-nav {
+
+    }
+    &-logo-box {
+
+    }
+    &-logo {
+        height: 2rem;
+    }
+
+    &-ul {
+       grid-column: 6 / 11;
+    }
+
+    &-link:link,
+    &-link:visited {
+        display: inline-block;
+        padding: 2rem;
+        list-style: none;
+        font-size: 1.6rem;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

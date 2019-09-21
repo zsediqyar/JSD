@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); }
+
+.header {
+  background-image: linear-gradient(to right bottom, rgba(24, 43, 58, 0.7), rgba(16, 29, 44, 0.8)), url("/imgs/index-hero.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-template-rows: repeat(2, 1fr); }
+  .header-logo {
+    height: 2rem; }
+  .header-ul {
+    grid-column: 6 / 11; }
+  .header-link:link, .header-link:visited {
+    display: inline-block;
+    padding: 2rem;
+    list-style: none;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase; }

@@ -1,0 +1,48 @@
+//COLORS
+$light-red:     #D3461C;
+$dark-red:      #b13232;
+$light-blue:    #182B3A;
+$dark-blue:     #101d2c;
+$light-yellow:  #FFB045;
+$dark-yellow:   #ec9b3b;
+$white:         #fff;
+$black:         #000;
+$light-gray:    #f2f6f5e2;
+$dark-gray:     #414141;
+$green:         #469A49;
+
+
+//FONTS
+$title-font: 'Montserrat', sans-serif;
+$body-font: 'Nunito Sans', sans-serif;
+
+
+//UTILITIES
+
+
+
+
+//CSS RESETS
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    font-family: $body-font;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
