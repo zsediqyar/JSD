@@ -1,38 +1,61 @@
 .header {
-    background-image: linear-gradient(to right bottom,
-        rgba($light-blue, .7),
-        rgba($dark-blue, .8)),
+    background-image: linear-gradient(to bottom,
+        rgba($dark-blue, .95),
+        rgba($light-blue, .85)),
         url("/imgs/index-hero.jpg");
     background-size: cover;
     background-position: top;
     height: 95vh;
     width: 100%;
     grid-column: 1 / -1;
+    position: relative;
 
-    grid-template-rows: repeat(2, 1fr);
 
-    &-nav {
-
-    }
-    &-logo-box {
-
-    }
-    &-logo {
-        height: 2rem;
+    &-text-box {
+        @include centerAbs;
+        padding: 4rem;
+        text-align: center;
     }
 
-    &-ul {
-       grid-column: 6 / 11;
-    }
-
-    &-link:link,
-    &-link:visited {
-        display: inline-block;
-        padding: 2rem;
-        list-style: none;
-        font-size: 1.6rem;
+    &-heading {
         color: $white;
-        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        &-main {
+            display: block;
+            font-size: 8rem;
+            font-weight: 300;
+            letter-spacing: 1.5rem;
+        }
+
+        &-sub {
+            display: block;
+            font-size: 2rem;
+            letter-spacing: .5rem;
+            color: $light-gray;
+            font-weight: 300;
+        }
+
+    }
+
+    .cta:link,
+    .cta:visited {
+        padding: 1rem 3rem;
+        text-decoration: none;
+        background: $white;
+        font-size: 1.6rem;
+        color: $dark-gray;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        transition: all .2s;
+    }
+    .cta:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
     }
 }
+
+
+

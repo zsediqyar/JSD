@@ -40,9 +40,19 @@ body {
     font-family: $body-font;
     font-weight: 300;
     line-height: 1.5;
+    color: $dark-gray;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+}
+
+
+//MIXINS
+@mixin centerAbs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

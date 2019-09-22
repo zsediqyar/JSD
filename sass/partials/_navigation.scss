@@ -1,0 +1,53 @@
+.navbar {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 25% auto;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    align-content: center;
+    align-items: center;
+
+    &-logo-box {
+        grid-column: 1 / 4;
+        grid-row: 1 / 1;
+
+    }
+
+    &-logo {
+        height: 5rem;
+    }
+
+    &-link-box {
+        list-style: none;
+        grid-column: 5 / 9;
+        grid-row: 1 / 1;
+        display: flex;
+        
+    }
+
+   &-items {
+        color: $white;
+        display: inline-block;
+        height: 100%;   
+        width: 100%;
+   }
+
+   &-links:link,
+   &-links:visited {
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        height: 100%;
+
+        &:hover {
+            background: rgba($white, .7);
+            color: $dark-blue;
+        }   
+   }
+
+
+}
