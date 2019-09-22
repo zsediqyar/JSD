@@ -56,19 +56,27 @@ body {
       letter-spacing: .5rem;
       color: #f2f6f5e2;
       font-weight: 300; }
-  .header .cta:link,
-  .header .cta:visited {
-    padding: 1rem 3rem;
-    text-decoration: none;
-    background: #fff;
-    font-size: 1.6rem;
-    color: #414141;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    transition: all .2s; }
-  .header .cta:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.cta:link,
+.cta:visited {
+  background-image: linear-gradient(to bottom, #f2f6f5e2, #fff);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #414141;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  display: inline-block;
+  border-radius: 10rem; }
+
+.cta:hover {
+  background-image: linear-gradient(to bottom, #d3461c, #b13232);
+  color: #fff;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.3); }
+
+.cta:active {
+  box-shadow: 0 0.5rem 0.4rem rgba(0, 0, 0, 0.2); }
 
 .navbar {
   grid-column: 1 / -1;
