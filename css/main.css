@@ -19,7 +19,8 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  color: #414141; }
+  color: #414141;
+  background: #f2f6f5e2; }
 
 .grid-container {
   display: grid;
@@ -113,3 +114,31 @@ body {
     .navbar-links:link:hover, .navbar-links:visited:hover {
       background: rgba(255, 255, 255, 0.7);
       color: #101d2c; }
+
+.main {
+  grid-column: 1 / -1;
+  height: 30rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); }
+
+.exp {
+  height: 15rem;
+  grid-column: 2 / 10;
+  grid-row: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem; }
+  .exp-card {
+    padding: 4rem 6rem;
+    text-align: center; }
+    .exp-card-header {
+      font-size: 2.5rem;
+      color: #D3461C;
+      font-weight: 100;
+      text-transform: uppercase;
+      margin-bottom: 1rem; }
+    .exp-card-paragraph {
+      font-size: 1.6rem; }
+  .exp svg {
+    fill: #414141;
+    width: 10rem; }
