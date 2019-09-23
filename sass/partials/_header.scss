@@ -7,9 +7,9 @@
     background-position: top;
     height: 95vh;
     width: 100%;
-    grid-column: 1 / -1;
+    grid-column: 1 / 11;
+    grid-row: 1 / 2;
     position: relative;
-
 
     &-text-box {
         @include centerAbs;
@@ -56,7 +56,7 @@
     border-radius: 10rem;
 }
 .cta:hover {
-    background-image: linear-gradient(to bottom, 
+    background-image: linear-gradient(to top, 
         rgba($light-red, 1),
         rgba($dark-red, 1));
     color: $white;

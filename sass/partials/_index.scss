@@ -1,0 +1,144 @@
+.main {
+    grid-column: 1 / 11;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, min-content);
+    grid-row-gap: 2rem;
+
+}
+
+.exp {
+    grid-column: 1 / 11;
+    grid-row: 1 / 2;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    
+
+    &-card {
+        padding: 4rem 10rem;
+        text-align: center;
+
+        &-header {
+            font-size: 2.5rem;
+            color: $light-red;
+            font-weight: 100;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        &-paragraph {
+            font-size: 1.6rem;
+        }
+    }
+    svg {
+        fill: $dark-gray;
+        width: 10rem;
+    }
+}
+//INDEX PAGE SERVICES SECTION
+.services {
+    grid-row: 2 / 3;
+    grid-column: 1 / 11;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-image: linear-gradient(to left,
+        rgba($light-gray, 1),
+        rgba($light-red, .05));
+        // url("/imgs/services-bg.jpg");
+    background-size: cover;
+    background-position: top;
+    
+    &-text {
+        grid-column: 1 / 4;
+        padding: 6rem 8rem;
+
+        &-title {
+            font-size: 4rem;
+            font-family: $title-font;
+            text-transform: uppercase;
+        }
+    }
+
+    &-types {
+        grid-column: 4 / 9;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        justify-items: start;
+
+        &-card {
+            padding: 0 6rem;
+            text-align: center;
+
+            svg {
+                width: 6rem;
+                height: auto;
+                fill: $light-blue;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &-heading {
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            color: $dark-yellow;
+            font-family: $title-font;
+            font-weight: 400;
+        }
+    }
+
+}
+
+.designs {
+    grid-column: 1 / 11;
+    grid-row: 3 / 4;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-rows: 10rem 1fr;
+    grid-template-columns: repeat(10, 1fr);
+    
+
+    &-title {
+        grid-column: 1 / 11;
+        padding: 4rem 10rem;
+        text-align: center;
+
+        &-heading {
+            font-size: 4rem;
+            font-family: $title-font;
+            text-transform: uppercase;
+        }
+    }
+
+    &-types {
+        grid-column: 1 / 11;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        align-items: center;
+        grid-gap: 1rem;
+        justify-items: center;
+    }
+
+    &-cards {
+        height: 20rem;
+        background: yellow;
+    }
+
+}
+
+
+
+.testimony {
+    grid-row: 4 / 5;
+    background: red;
+}
+
+.contact {
+    grid-row: 5 / 6;
+    background: red;
+}

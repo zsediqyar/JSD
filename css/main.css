@@ -4,6 +4,9 @@
   100% {
     opacity: 1; } }
 
+.paragraph {
+  font-size: 1.6rem; }
+
 *,
 *::before,
 *::after {
@@ -24,7 +27,8 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); }
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 95vh auto; }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(16, 29, 44, 0.95), rgba(24, 43, 58, 0.85)), url("/imgs/index-hero.jpg");
@@ -32,7 +36,8 @@ body {
   background-position: top;
   height: 95vh;
   width: 100%;
-  grid-column: 1 / -1;
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
   position: relative; }
   .header-text-box {
     position: absolute;
@@ -72,7 +77,7 @@ body {
   border-radius: 10rem; }
 
 .cta:hover {
-  background-image: linear-gradient(to bottom, #d3461c, #b13232);
+  background-image: linear-gradient(to top, #d3461c, #b13232);
   color: #fff;
   box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.3); }
 
@@ -116,20 +121,20 @@ body {
       color: #101d2c; }
 
 .main {
-  grid-column: 1 / -1;
-  height: 30rem;
+  grid-column: 1 / 11;
   display: grid;
-  grid-template-columns: repeat(10, 1fr); }
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, min-content);
+  grid-row-gap: 2rem; }
 
 .exp {
-  height: 15rem;
-  grid-column: 2 / 10;
-  grid-row: 1 / 1;
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
+  margin-bottom: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2rem; }
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
   .exp-card {
-    padding: 4rem 6rem;
+    padding: 4rem 10rem;
     text-align: center; }
     .exp-card-header {
       font-size: 2.5rem;
@@ -142,3 +147,77 @@ body {
   .exp svg {
     fill: #414141;
     width: 10rem; }
+
+.services {
+  grid-row: 2 / 3;
+  grid-column: 1 / 11;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-image: linear-gradient(to left, #f2f6f5, rgba(211, 70, 28, 0.05));
+  background-size: cover;
+  background-position: top; }
+  .services-text {
+    grid-column: 1 / 4;
+    padding: 6rem 8rem; }
+    .services-text-title {
+      font-size: 4rem;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase; }
+  .services-types {
+    grid-column: 4 / 9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    justify-items: start; }
+    .services-types-card {
+      padding: 0 6rem;
+      text-align: center; }
+      .services-types-card svg {
+        width: 6rem;
+        height: auto;
+        fill: #182B3A;
+        padding: 0;
+        margin: 0; }
+    .services-types-heading {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      color: #ec9b3b;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400; }
+
+.designs {
+  grid-column: 1 / 11;
+  grid-row: 3 / 4;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-rows: 10rem 1fr;
+  grid-template-columns: repeat(10, 1fr); }
+  .designs-title {
+    grid-column: 1 / 11;
+    padding: 4rem 10rem;
+    text-align: center; }
+    .designs-title-heading {
+      font-size: 4rem;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase; }
+  .designs-types {
+    grid-column: 1 / 11;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: center;
+    grid-gap: 1rem;
+    justify-items: center; }
+  .designs-cards {
+    height: 20rem;
+    background: yellow; }
+
+.testimony {
+  grid-row: 4 / 5;
+  background: red; }
+
+.contact {
+  grid-row: 5 / 6;
+  background: red; }
