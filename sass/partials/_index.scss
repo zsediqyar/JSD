@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(6, min-content);
-    grid-row-gap: 2rem;
+    // grid-row-gap: 2rem;
 
 }
 
@@ -102,7 +102,7 @@
     display: grid;
     grid-template-rows: minmax(min-content, 1fr);
     grid-template-columns: repeat(10, 1fr);
-    padding: 0 8rem;
+    padding: 4rem 8rem;
 
     &-title {
         grid-column: 1 / 11;
@@ -192,15 +192,124 @@
     grid-row: 4 / 5;
     grid-column: 1 / 11;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-column-gap: 2rem;
+    padding: 15rem 5rem 15rem 5rem;
+    background-image: linear-gradient(to bottom, $light-gray, $white);
+    align-items: center;
 
-    &-ass{
-        background: lime;
+    &-title {
+        text-align: center;
+
+        &-heading {
+            font-size: 3rem;
+            font-family: $title-font;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            display: inline-block;
+            padding: .3rem .5rem;
+            font-size: 1.4rem;
+            color: $light-red;
+            transition: all .3s;
+        }
+        
+        &-link:hover {
+            background: $light-red;
+            color: $white;
+            border-radius: 1px;
+            padding: .3rem 1rem;
+        }
+    }
+    
+    .client-card {
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 2rem 5rem rgba($black, .3);
+        height: 18rem;
+        background: $white;
+        border-radius: 1px;
+        position: relative;
+
+        &-img {
+            margin-right: 2rem;
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        &-p {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+        &-name {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            font-weight: 200;
+            color: $light-red;
+        }
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            padding: .2rem .5rem;
+            color: $dark-blue;
+            letter-spacing: 2px;
+            transition: all .3s;
+            margin-top: 1rem;
+
+            &:hover {
+                background: $light-red;
+                color: $white;
+                transform: translateY(.1rem);
+                box-shadow: 0 1rem 1rem rgba($black, .2);
+            }
+        }
+        &::before {
+            content: "\201C";
+            position: absolute;
+            top: -5.3rem;
+            right: -.95rem;
+            font-size: 15rem;
+            color: rgba($dark-gray, .1);
+            font-family: sans-serif;
+        }
     }
 }
 
+
 .contact {
     grid-row: 5 / 6;
-    background: red;
+    grid-column: 1 / 11;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10rem 6rem;
+
+    &-title {
+        margin: 0 auto;
+        text-align: center;
+        
+        p {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            color: rgba($dark-gray, .7);
+        }
+    }
+
+    &-heading {
+        font-size: 3rem;
+        font-family: $title-font;
+        text-transform: uppercase;
+    }
 }

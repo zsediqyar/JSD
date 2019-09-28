@@ -124,8 +124,7 @@ body {
   grid-column: 1 / 11;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(6, min-content);
-  grid-row-gap: 2rem; }
+  grid-template-rows: repeat(6, min-content); }
 
 .exp {
   grid-column: 1 / 11;
@@ -195,7 +194,7 @@ body {
   display: grid;
   grid-template-rows: minmax(min-content, 1fr);
   grid-template-columns: repeat(10, 1fr);
-  padding: 0 8rem; }
+  padding: 4rem 8rem; }
   .designs-title {
     grid-column: 1 / 11;
     padding: 4rem 5rem;
@@ -261,11 +260,92 @@ body {
   grid-row: 4 / 5;
   grid-column: 1 / 11;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-column-gap: 2rem; }
-  .testimony-ass {
-    background: lime; }
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 2rem;
+  padding: 15rem 5rem 15rem 5rem;
+  background-image: linear-gradient(to bottom, #f2f6f5e2, #fff);
+  align-items: center; }
+  .testimony-title {
+    text-align: center; }
+    .testimony-title-heading {
+      font-size: 3rem;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase; }
+    .testimony-title p {
+      font-size: 1.6rem; }
+    .testimony-title-link:link, .testimony-title-link:visited {
+      text-decoration: none;
+      display: inline-block;
+      padding: .3rem .5rem;
+      font-size: 1.4rem;
+      color: #D3461C;
+      transition: all .3s; }
+    .testimony-title-link:hover {
+      background: #D3461C;
+      color: #fff;
+      border-radius: 1px;
+      padding: .3rem 1rem; }
+  .testimony .client-card {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+    height: 18rem;
+    background: #fff;
+    border-radius: 1px;
+    position: relative; }
+    .testimony .client-card-img {
+      margin-right: 2rem; }
+    .testimony .client-card-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    .testimony .client-card-p {
+      font-size: 1.5rem;
+      margin-top: 2rem; }
+    .testimony .client-card-name {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      font-weight: 200;
+      color: #D3461C; }
+    .testimony .client-card-link:link, .testimony .client-card-link:visited {
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
+      padding: .2rem .5rem;
+      color: #101d2c;
+      letter-spacing: 2px;
+      transition: all .3s;
+      margin-top: 1rem; }
+      .testimony .client-card-link:link:hover, .testimony .client-card-link:visited:hover {
+        background: #D3461C;
+        color: #fff;
+        transform: translateY(0.1rem);
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+    .testimony .client-card::before {
+      content: "\201C";
+      position: absolute;
+      top: -5.3rem;
+      right: -.95rem;
+      font-size: 15rem;
+      color: rgba(65, 65, 65, 0.1);
+      font-family: sans-serif; }
 
 .contact {
   grid-row: 5 / 6;
-  background: red; }
+  grid-column: 1 / 11;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rem 6rem; }
+  .contact-title {
+    margin: 0 auto;
+    text-align: center; }
+    .contact-title p {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      color: rgba(65, 65, 65, 0.7); }
+  .contact-heading {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase; }
