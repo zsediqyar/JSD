@@ -30,6 +30,30 @@ body {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 95vh auto; }
 
+.footer {
+  grid-column: 1 / 11;
+  padding: 10rem;
+  background-image: linear-gradient(to top, rgba(16, 29, 44, 0.9), #182b3a), url("/imgs/index-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #f2f6f5e2;
+  font-size: 1.6rem; }
+  .footer-nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    align-items: center; }
+    .footer-nav-link:link, .footer-nav-link:visited {
+      color: #f2f6f5e2;
+      font-size: 1.4rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+      display: block;
+      transition: all .2s; }
+
 .header {
   background-image: linear-gradient(to bottom, rgba(16, 29, 44, 0.95), rgba(24, 43, 58, 0.85)), url("/imgs/index-hero.jpg");
   background-size: cover;
@@ -337,7 +361,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10rem 6rem; }
+  padding: 10rem 6rem;
+  background: #fff; }
   .contact-title {
     margin: 0 auto;
     text-align: center; }
