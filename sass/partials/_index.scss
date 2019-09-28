@@ -47,7 +47,7 @@
     padding: 4rem 0;
     background-image: linear-gradient(to left,
         rgba($light-gray, 1),
-        rgba($light-red, .05));
+        rgba($light-red, .08));
         // url("/imgs/services-bg.jpg");
     background-size: cover;
     background-position: top;
@@ -94,24 +94,47 @@
 
 }
 
+//DESIGNS SECTION CODE
 .designs {
     grid-column: 1 / 11;
     grid-row: 3 / 4;
     margin-bottom: 3rem;
     display: grid;
-    grid-template-rows: 10rem 1fr;
+    grid-template-rows: minmax(min-content, 1fr);
     grid-template-columns: repeat(10, 1fr);
-    
+    padding: 0 8rem;
 
     &-title {
         grid-column: 1 / 11;
-        padding: 4rem 10rem;
+        padding: 4rem 5rem;
         text-align: center;
 
         &-heading {
             font-size: 4rem;
             font-family: $title-font;
             text-transform: uppercase;
+        }
+
+        &-p {
+            font-size: 1.6rem;
+            margin-top: 1rem;
+        }
+
+        &-a:link,
+        &-a:visited {
+            text-decoration: none;
+            display: inline-block;
+            padding: .3rem .5rem;
+            font-size: 1.4rem;
+            color: $light-red;
+            transition: all .3s;
+        }
+        
+        &-a:hover {
+            background: $light-red;
+            color: $white;
+            transform: translateY(-.4rem);
+            border-radius: 1px;
         }
     }
 
@@ -122,20 +145,59 @@
         align-items: center;
         grid-gap: 1rem;
         justify-items: center;
+        padding: 4rem 0;
+
     }
 
-    &-cards {
-        height: 20rem;
-        background: yellow;
+
+    &-figure {
+        width: 20rem;
+        position: relative;
+        box-shadow: 0 2rem 4rem rgba($black, .7);
+        margin: 2rem;
+    }
+
+    &-image {
+        width: 100%;
+        transform: scale(1.4);
+        transition: all .5s;
+    }
+
+    &-caption {
+        position: absolute;
+        @include centerAbs;
+        color: $white;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: opacity .5s;
+        opacity: 0;
+        letter-spacing: 1px;
+    }
+
+    &-image:hover ~ &-caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &-image:hover {
+        transform: scale(1.2);
+        filter: blur(2px) brightness(80%);
     }
 
 }
 
-
-
 .testimony {
     grid-row: 4 / 5;
-    background: red;
+    grid-column: 1 / 11;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 2rem;
+
+    &-ass{
+        background: lime;
+    }
 }
 
 .contact {
