@@ -32,27 +32,80 @@ body {
 
 .footer {
   grid-column: 1 / 11;
-  padding: 10rem;
+  padding: 8rem;
   background-image: linear-gradient(to top, rgba(16, 29, 44, 0.9), #182b3a), url("/imgs/index-hero.jpg");
   background-size: cover;
   background-position: center;
   color: #f2f6f5e2;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: 1fr repeat(2, min-content);
+  grid-gap: 1rem; }
+  .footer-logo {
+    width: 15rem; }
+  .footer-logo-box p,
+  .footer-logo-box span {
+    text-transform: capitalize;
+    color: #f2f6f5e2;
+    font-size: 1.2rem; }
   .footer-nav {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-gap: 1rem;
     align-items: center; }
     .footer-nav-link:link, .footer-nav-link:visited {
       color: #f2f6f5e2;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       text-decoration: none;
       text-transform: uppercase;
-      text-align: center;
+      text-align: left;
       padding: 1.5rem;
       display: block;
-      transition: all .2s; }
+      transition: all .2s;
+      line-height: 1;
+      display: inline-block; }
+    .footer-nav-link:hover {
+      transform: translateY(-0.4rem); }
+    .footer-nav-link:active {
+      transform: translateY(-0.2rem); }
+  .footer-social {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #f2f6f5e2; }
+    .footer-social::before, .footer-social::after {
+      content: "";
+      height: .5px;
+      display: block;
+      background: rgba(255, 255, 255, 0.3); }
+  .footer-icons {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    text-align: center;
+    justify-content: center; }
+    .footer-icons-links:link, .footer-icons-links:visited {
+      display: inline-block;
+      padding: .5rem 2rem;
+      color: #f2f6f5e2;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      border: 1px solid #f2f6f5e2;
+      transition: all .3s; }
+    .footer-icons-links:not(:last-child) {
+      margin-right: 1rem; }
+    .footer-icons-links:hover {
+      background: #fff;
+      color: #414141;
+      transform: translateY(-0.4rem);
+      box-shadow: 0 0.5rem 1rem rgba(242, 246, 245, 0.1); }
+    .footer-icons-links:active {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.3rem 0.5rem rgba(242, 246, 245, 0.1); }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(16, 29, 44, 0.95), rgba(24, 43, 58, 0.85)), url("/imgs/index-hero.jpg");
@@ -358,11 +411,12 @@ body {
 .contact {
   grid-row: 5 / 6;
   grid-column: 1 / 11;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: center;
   padding: 10rem 6rem;
-  background: #fff; }
+  background: #fff;
+  text-align: center; }
   .contact-title {
     margin: 0 auto;
     text-align: center; }
@@ -374,3 +428,31 @@ body {
     font-size: 3rem;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase; }
+    .contact-heading-link:link, .contact-heading-link:visited {
+      padding: .5rem 1rem;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: inline-block;
+      color: #D3461C;
+      transition: all .3s; }
+      .contact-heading-link:link:hover, .contact-heading-link:visited:hover {
+        color: #fff;
+        background: #D3461C;
+        transform: translateY(-0.4rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+      .contact-heading-link:link:active, .contact-heading-link:visited:active {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
+  .contact h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif; }
+  .contact svg {
+    width: 10rem;
+    fill: #414141;
+    transition: all .3s; }
+  .contact svg:hover {
+    fill: #D3461C;
+    transform: translateY(-0.4rem); }

@@ -291,11 +291,13 @@
 .contact {
     grid-row: 5 / 6;
     grid-column: 1 / 11;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: center;
     padding: 10rem 6rem;
     background: $white;
+    text-align: center;
+
 
     &-title {
         margin: 0 auto;
@@ -312,5 +314,43 @@
         font-size: 3rem;
         font-family: $title-font;
         text-transform: uppercase;
+        
+        &-link:link,
+        &-link:visited {
+            padding: .5rem 1rem;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            color: $light-red;
+            transition: all .3s;
+            
+            &:hover {
+                color: $white;
+                background: $light-red;
+                transform: translateY(-.4rem);
+                box-shadow: 0 .5rem 1rem rgba($black, .3);
+            }
+            &:active {
+                transform: translateY(-.2rem);
+                box-shadow: 0 .2rem .5rem rgba($black, .3);
+            }
+        }
+    }
+
+    h4 {
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: $title-font;
+    }
+    svg {
+        width: 10rem;
+        fill: $dark-gray;
+        transition: all .3s;
+    }
+    svg:hover {
+        fill: $light-red;
+        transform: translateY(-.4rem);
     }
 }

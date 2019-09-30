@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Nunito+Sans:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>JS Designs | We Make Launching Your Website Easy &amp; Affordable</title>
   </head>
@@ -205,13 +207,25 @@
   <section class="contact">
     <div class="contact-title">
       <h2 class="contact-heading">We are located in the bay area</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quod illo, mollitia consequuntur molestiae.</p>
+        <p>You can also fill out a form and we will get back to you</p>
+        <a href="#" class="contact-heading-link">Yes, I love Forms</a>
     </div>
     <div class="contact-phone">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, officia in id, debitis accusantium veritatis laborum deleniti dicta vitae deserunt cupiditate dignissimos eum unde blanditiis omnis delectus libero ea. Ducimus.</p>
+      <h4>Call Us</h4>
+      <a href="tel:555-555-5555">
+        <svg class="lnr lnr-phone">
+          <use xlink:href="#lnr-phone"></use>
+        </svg>
+      </a>
+    </div>
     </div>
     <div class="contact-email">
-
+      <h4>Email Us</h4>
+      <a href="mailto:info@jsdesigns.site">
+        <svg class="lnr lnr-envelope">
+          <use xlink:href="#lnr-envelope"></use>
+        </svg>
+    </a>
     </div>
     
 
@@ -219,20 +233,44 @@
   </main>
 
   <footer class="footer">
-    <ul class="footer-nav">
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">home</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">clients</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">services</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">designs</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">prices</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">about</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">contact</a></li>
-      <li class="footer-nav-item"><a href="#" class="footer-nav-link">testimonials</a></li>
-    </ul>
+    <div class="footer-logo-box">
+      <img src="/imgs/graphics/jsd.png" alt="JSD Logo" class="footer-logo">
+      <p>Helping small businesses thrive</p>
+      <span>&copy; 2017 - <span id="current-date"></span></span>
+    </div>
+    <div class="footer-nav-box">
+      <ul class="footer-nav">
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">home</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">clients</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">services</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav-box">
+      <ul class="footer-nav">
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">designs</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">prices</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">about</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav-box">
+      <ul class="footer-nav">
+        <li class="footer-nav-item"><a href="#" class="footer-nav-link">contact</a></li>
+        <li class="footer-nav-item"><a href="#" class="footer-nav-link">testimonials</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">Find Us</div>
+    <div class="footer-icons">
+      <a href="#" class="footer-icons-links">LinkedIn</a>
+      <a href="#" class="footer-icons-links">Facebook</a>
+      <a href="#" class="footer-icons-links">Yelp</a>
+    </div>
   </footer>
 
 
-
+  <script>
+    let date = document.getElementById("current-date");
+    date.innerHTML = new Date().getFullYear();
+  </script>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
   </body>
 </html>

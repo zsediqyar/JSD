@@ -1,6 +1,6 @@
 .footer {
     grid-column: 1 / 11;
-    padding: 10rem; 
+    padding: 8rem; 
     background-image: linear-gradient(to top,
         rgba($dark-blue, .9),
         rgba($light-blue, 1)),
@@ -9,29 +9,96 @@
     background-position: center;
     color: $light-gray;
     font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: 1fr repeat(2, min-content);
+    grid-gap: 1rem;
 
+    &-logo {
+        width: 15rem;
+    }
+    
+    &-logo-box p,
+    &-logo-box span {
+        text-transform: capitalize;
+        color: $light-gray;
+        font-size: 1.2rem;
+    }
+    
     &-nav {
         list-style: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        grid-gap: 1rem;
         align-items: center;
-
-
-        &-item {
-
-        }
 
         &-link:link,
         &-link:visited {
             color: $light-gray;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             text-decoration: none;
             text-transform: uppercase;
-            text-align: center;
+            text-align: left;
             padding: 1.5rem;
             display: block;
             transition: all .2s;
+            line-height: 1;
+            display: inline-block;
+        }
+        &-link:hover {
+            transform: translateY(-.4rem);
+        }
+        &-link:active {
+            transform: translateY(-.2rem);
+        }
+    }
+
+    &-social {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        color: $light-gray;
+        
+        &::before,
+        &::after {
+            content: "";
+            height: .5px;
+            display: block;
+            background: rgba($white, .3);
+        }
+    }
+
+    &-icons {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        text-align: center;
+        justify-content: center;
+
+        &-links:link,
+        &-links:visited {
+            display: inline-block;
+            padding: .5rem 2rem;
+            color: $light-gray;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border: 1px solid $light-gray;
+            transition: all .3s;
+        }
+        &-links:not(:last-child) {
+            margin-right: 1rem;
+        }
+        &-links:hover {
+            background: $white;
+            color: $dark-gray;
+            transform: translateY(-.4rem);
+            box-shadow: 0 .5rem 1rem rgba($light-gray, .1);
+        }
+        &-links:active {
+            transform: translateY(-.2rem);
+            box-shadow: 0 .3rem .5rem rgba($light-gray, .1);
         }
     }
 }
